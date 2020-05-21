@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pong</title>
+    <style>
+        body {
+            background: gray;
+        }
+        h3 {
+            text-align: center;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        
+        canvas {
+            display: block;
+            width: 90%;
+            height: 900%;
+            border: 5px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script src="../Utils/WGLutils.js"></script>
+    <script src="main.js"></script>
+    <p>
+        <h3>Witaj!</h3>
+        Poruszaj się platformami w górę i w dół i postaraj sie jak najwięcej razy odbić piłkę. Piłka po każdym odbiciu przyspiesza, lewą platformą możesz poruszać się za pomocą klawiszy w oraz s a prawą platformą za pomocą strzałek, aby dodać dodatkową piłke wciśnij klawisz b.
+    </p>
+</body>
+</html>

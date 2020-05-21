@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Żółw 3D</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-areas: "left right";
+            grid-template-columns: 850px auto;
+            grid-template-rows: auto;
+            grid-column-gap: 30px;
+        }
+        
+        svg {
+            border: 1px solid black;
+        }
+        
+        textarea {
+            width: 250px;
+            height: 200px;
+        }
+        
+        .right {
+            grid-area: right;
+            text-align: start;
+        }
+        
+        .left {
+            grid-area: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="left">
+        <svg id="svg_canvas" width=800px height=800px></svg>
+        <script src="turtle3d.js"></script>
+    </div>
+    <div id="right">
+        <div>
+            <p>
+                Akcja rozgrywa się w kostce o wymiarach 300/300/300<br>Po wpisaniu listy kroków żółwia naciśnij "Go turtle".<br>
+                <br>środek kostki jest miejscem startu zółwia, czylipunkt (0, 0, 0)<br>Sześcian w którym zozgrywa się cała akcja możesz obracać myszką.<br>
+            </p>
+            <p style="color: red; opacity:0.65;">oś x</p>
+            <p style="color: green; opacity:0.65;">oś y</p>
+            <p style="color: blue; opacity:0.65;">oś z</p>
+            <p>
+                Na początku zółw porusza się po osi x.
+            </p>
+            <form>
+                <textarea id="turtleTrail" name="trasa żółwia"></textarea>
+            </form>
+            <button id="goButton" type="button">Go turtle</button>
+        </div>
+        <br>
+        <h3>Przykładowa ścieżka</h3>
+        <pre>
+//TO DO
+        </pre>
+    </div>
+</body>
+
+</html>

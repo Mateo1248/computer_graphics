@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interaktywny żółw</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-areas: "left right";
+            grid-template-columns: 650px auto;
+            grid-template-rows: auto;
+            grid-column-gap: 30px;
+        }
+        
+        canvas {
+            border: 1px solid black;
+        }
+        
+        textarea {
+            width: 250px;
+            height: 200px;
+        }
+        
+        .right {
+            grid-area: right;
+            text-align: start;
+        }
+        
+        .left {
+            grid-area: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="left">
+        <canvas id="canvas" width=600px height=600px>
+                    <script src="./interactiveTurtle.js"></script>
+                </canvas>
+        <h3>Kolorowy kwadrat</h3>
+
+        <pre>
+position -90 -90
+color red
+move 180
+turn 90
+color blue
+move 180
+turn 90
+color red
+move 180
+turn 90
+color blue
+move 180
+turn 90
+        </pre>
+    </div>
+
+    <div id="right">
+        <div>
+            <p>
+                Akcja rozgrywa się na planszy 200x200<br> Funkcje:<br> position x y - ustaw pozycje żółwia (start 0 0 - środek planszy)
+                <br> move x - idź x kroków<br> turn &alpha; - skręć o kąt &alpha;
+                <br> color color_name - zmień kolor żołwia<br> clear - wyczyść plansze<br><br>Po wpisaniu listy kroków żółwia naciśnij "Go turtle".<br>
+            </p>
+            <form>
+                <textarea id="turtleTrail" name="trasa żółwia"></textarea>
+            </form>
+            <button id="goButton" type="button">Go turtle</button>
+            <button id="clearButton" onclick="clearTextArea()" type="button">Clear</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zad 2</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width=700px height=700px></canvas>
+    <nav>
+        <button onclick="decreaseDepth()">Decrease depth</button>
+        <button onclick="increaseDepth()">Increase depth</button>
+        <button onclick="moveLeft()">Left</button>
+        <button onclick="moveRight()">Right</button>
+        <button onclick="moveUp()">Up</button>
+        <button onclick="moveDown()">Down</button>
+        <button onclick="changeColor()">Change color</button>
+    </nav>
+    <script src="main.js"></script>
+    <script src="../Utils/WGLutils.js"></script>
+</body>
+</html>
